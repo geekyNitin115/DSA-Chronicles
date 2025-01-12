@@ -24,6 +24,7 @@ class Graph{
     }
     void dfs(int node,unordered_map<int, bool> &vis ,stack<int> & topo){
         vis[node] = true;
+        
         for(auto neighbour: adj[node]){
             if(!vis[neighbour.first]){
                 dfs(neighbour.first,vis,topo);
